@@ -57,7 +57,7 @@ markupsafe==2.1.5
     # via jinja2
 mdurl==0.1.2
     # via markdown-it-py
-numpy==1.26.4
+numpy==2.0.0
     # via altair
     # via pandas
     # via phillips-curve
@@ -106,7 +106,7 @@ smmap==5.0.1
 sniffio==1.3.1
     # via anyio
     # via httpx
-streamlit==1.35.0
+streamlit==1.36.0
     # via phillips-curve
 tenacity==8.4.1
     # via dbnomics
