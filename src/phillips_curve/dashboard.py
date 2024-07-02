@@ -8,7 +8,7 @@ import plotly.io as pio
 import streamlit as st
 from dbnomics import fetch_series
 
-package_dir = importlib.resources.files("beveridge_curve")
+package_dir = importlib.resources.files("phillips_curve")
 
 # thème des graphiques
 pio.templates.default = "ggplot2"
