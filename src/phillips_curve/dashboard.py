@@ -1,10 +1,14 @@
+import importlib.resources
+
 import numpy as np
 import pandas as pd
-import plotly.io as pio
 import plotly.express as px
 import plotly.graph_objects as go
+import plotly.io as pio
 import streamlit as st
 from dbnomics import fetch_series
+
+package_dir = importlib.resources.files("beveridge_curve")
 
 # thème des graphiques
 pio.templates.default = "ggplot2"
@@ -129,8 +133,14 @@ fig_us = create_phillips_curve(df_us, "United States")
 fig_ar = create_phillips_curve(df_ar, "Argentina")
 fig_jp = create_phillips_curve(df_jp, "Japan")
 
+st.set_page_config(
+    page_title="Phillips curve dashboard with DBnomics data",
+    page_icon=str(package_dir / "images/favicon.png"),
+)
+
+
 # logo DBnomics
-st.image("dbnomics (2).svg", width=300)
+st.image(src(package_dir / "dbnomics.svg"), width=300)
 # Interface Streamlit
 st.title(":blue[Phillips Curve]")
 st.subheader(":blue[**Explanations**]")
