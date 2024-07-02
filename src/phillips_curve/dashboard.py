@@ -140,7 +140,7 @@ st.set_page_config(
 
 
 # logo DBnomics
-st.image(str(package_dir / "dbnomics.svg"), width=300)
+st.image(str(package_dir / "images/dbnomics.svg"), width=300)
 # Interface Streamlit
 st.title(":blue[Phillips Curve]")
 st.subheader(":blue[**Explanations**]")
